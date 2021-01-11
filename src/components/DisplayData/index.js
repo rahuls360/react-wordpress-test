@@ -1,6 +1,4 @@
-import { data } from 'autoprefixer';
-
-const { Component } = wp.element;
+const { render, Component } = wp.element;
 
 export default class DisplayData extends Component {
   constructor(props) {
@@ -19,7 +17,7 @@ export default class DisplayData extends Component {
   render() {
     return (
       <div>
-        <h1>test</h1>
+        <h1>testeddd</h1>
         {this.state.data.map((item) => (
           <div key={item.albumId}>
             <h3>{item.title}</h3>
@@ -30,3 +28,5 @@ export default class DisplayData extends Component {
     );
   }
 }
+
+render(<DisplayData />, document.getElementById(`products-root`));

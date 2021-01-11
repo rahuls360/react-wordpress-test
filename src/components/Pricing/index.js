@@ -1,6 +1,5 @@
 const { render, useState } = wp.element;
 import SignupForm from '../SignupForm';
-import DisplayData from '../DisplayData';
 
 const Votes = () => {
   const [votes, setVotes] = useState(0);
@@ -14,7 +13,6 @@ const Votes = () => {
         <button onClick={addVote}>Vote!</button>
       </p>
       <SignupForm />
-      <DisplayData />
     </div>
   );
 };

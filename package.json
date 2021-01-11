@@ -49,7 +49,7 @@
 		"extends @wordpress/browserslist-config"
 	],
 	"scripts": {
-		"start": "wp-scripts start src/components/Pricing/index.js --output-path=build",
+		"start": "wp-scripts start pricing=./src/components/Pricing/index.js products=./src/components/DisplayData/index.js --output-path=build",
 		"start-css": "chokidar \"**/*.scss\" -c \"npm run build\" --initial && wp-scripts start",
 		"build:style": "sass assets/sass/style.scss:style.css --style=expanded --source-map",
 		"build:style-editor": "sass assets/sass/style-editor.scss:assets/css/style-editor.css --style=expanded --source-map",

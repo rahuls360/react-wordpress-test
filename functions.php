@@ -614,7 +614,15 @@ function pricing_js() {
 	if(is_page('pricing')){
 		wp_enqueue_script(
 			'pricing-frontend',
-			get_stylesheet_directory_uri() . '/build/index.js',
+			get_stylesheet_directory_uri() . '/build/pricing.js',
+			['wp-element'],
+			time(), // Change this to null for production
+			true
+		);
+	}else if(is_page('products')){
+		wp_enqueue_script(
+			'pricing-frontend',
+			get_stylesheet_directory_uri() . '/build/products.js',
 			['wp-element'],
 			time(), // Change this to null for production
 			true

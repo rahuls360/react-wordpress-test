@@ -29,9 +29,7 @@
 		the_content();
 		?>
 		
-		<?php if(is_page('pricing') ) : ?>
-			<div id="pricing-root">my content</div>
-		<?php endif; ?>
+			<div id="<?php echo $post->post_name;?>-root">my content</div>
 
 		<?php
 		wp_link_pages(
